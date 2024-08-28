@@ -1,4 +1,7 @@
-﻿namespace OOP03
+﻿using OOP03.Polymorphism;
+using OOP03.Polymorphism___Overriding;
+
+namespace OOP03
 {
     internal class Program
     {
@@ -49,6 +52,25 @@
             //Console.WriteLine($"Result = {Result02}"); // 3.40
 
             //Result02 = Sum(2, 2.2);
+
+            #endregion
+
+            #region Part 03 Polymorphism - Overriding
+            // Supported With Class ONLY
+            // Function Overriding Must Be With Relationship [Inheritance]
+
+
+            //TypeA typeA = new TypeA(1);
+            //typeA.A = 10;
+            //typeA.MyFunc01(); // I am Base [Parent]
+            //typeA.MyFunc02(); // TypeA : A = 10
+
+            //Console.WriteLine("===============");
+            //TypeB typeB = new TypeB(1, 3);
+            //typeB.A = 10;
+            //typeB.B = 20;
+            //typeB.MyFunc01();
+            //typeB.MyFunc02();
 
             #endregion
 
