@@ -23,7 +23,10 @@ namespace OOP03.Polymorphism___Overriding
         // 2. Using Override Keyword
 
         // Apply Function Overriding Using New Keyword
-
+        // Static Binding [Early Binding]
+        // MyFunc01() => Static Bonded Method
+        // Static Binding Works During Compiler Time
+        // Compiler Wiil Bind Function Call Based On Reference Type Not Object Type 
         public new void MyFunc01() // New => New Version From MyFunc01() 
         {
             Console.WriteLine("I am Derived [Child]");
@@ -31,7 +34,10 @@ namespace OOP03.Polymorphism___Overriding
 
         // Appling Function Overriding Using Overriding Keyword
         // Function Must be Inherited From Parent [Public - Virtual Function]
-
+        // Dynamic Binding [Late Binding]
+        // MyFunc02() => Dynamic Bonded Method 
+        // Dynamic Bining Work During Run Time
+        // CLR Will Bind Function Call Based On Obgject Type Not Reference Type   
 
         public override void MyFunc02()
         {
