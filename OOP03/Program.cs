@@ -74,7 +74,7 @@ namespace OOP03
 
             #endregion
 
-            #region MyRegion
+            #region Binding
 
             // Ref From Parent => Object From Child
 
@@ -89,6 +89,40 @@ namespace OOP03
             ////RefBase.B = 20; //Invalid
             //RefBase.MyFunc01();// Override Using New [Static Binding]
             //RefBase.MyFunc02();// Override Using Override [Dynamic Binding]
+
+            #endregion
+
+            #region Not Binding
+            //Ref From Child => Object From Parent
+
+
+            //TypeB ChildRef = new TypeA(); // Invalid
+            //RefBase = (TypeB) new TypeA(4); // Not Binding
+            // Explicit Casting 
+            // Unsafe Casting
+
+            //TypeA typeA = new TypeA(4);
+            //TypeB typeB = (TypeB) typeA;// Explicit Casting
+            //// (TypeB) => Casting Operator - Function 
+
+            //Console.WriteLine(typeB.A);
+            //Console.WriteLine(typeB.B);
+
+            //// System.InvalidCastException  
+
+            //TypeA typeA = new TypeB(1, 4);
+            //TypeB typeB = (TypeB) typeA;
+
+            //Console.WriteLine(typeB.A); // 1
+            //Console.WriteLine(typeB.B); // 4
+
+
+            //object O = 13;
+
+            //int X = (int) O;
+
+            //Console.WriteLine(X);
+
 
             #endregion
         }
