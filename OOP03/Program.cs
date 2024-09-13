@@ -1,4 +1,5 @@
-﻿using OOP03.Polymorphism;
+﻿using OOP03.Binding;
+using OOP03.Polymorphism;
 using OOP03.Polymorphism___Overriding;
 
 namespace OOP03
@@ -35,6 +36,28 @@ namespace OOP03
         //}
 
         #endregion
+
+        // Employee employee
+        // Can refer => object employee
+        // Can refer => object From Class Inheirt From employee [FullTimeEmployee - ParttimeEmployee]
+        public static void ProcessEmployee(Employee employee)
+        {
+            if(employee is not null)
+            {
+                employee.GetEmployeeType();
+                employee.GetEmployeeData();
+            } 
+        }
+        
+        // Not Overloading
+        //public static void ProcessEmployee(ParttimeEmployee employee)
+        //{
+        //    if(employee is not null)
+        //    {
+        //        employee.GetEmployeeType();
+        //        employee.GetEmployeeData();
+        //    } 
+        //}
         static void Main(string[] args)
         {
             #region Part 02 Polymorphism - Overloading
@@ -125,6 +148,26 @@ namespace OOP03
 
 
             #endregion
+
+            #region Part 06 Binding Ex 01
+
+            FulltimeEmployee fulltimeEmployee = new FulltimeEmployee(99, "Waleed", 22, 8000);
+            ProcessEmployee(fulltimeEmployee);
+
+
+            ParttimeEmployee parttimeEmployee = new ParttimeEmployee()
+            {
+                Id = 97,
+                Name = "Waleed",
+                Age = 22,
+                HourRate = 2.5m,
+                CountOfHours = 87
+            };
+
+            ProcessEmployee(parttimeEmployee); // Invalid
+
+            #endregion
+            
         }
     }
 }
